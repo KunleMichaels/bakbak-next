@@ -5,16 +5,16 @@ const theme = createMuiTheme({
   palette: {
     primary: pink,
     secondary: grey
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 360,
-      md: 600,
-      lg: 900,
-      xl: 1280
-    }
   }
+  // breakpoints: {
+  //   values: {
+  //     xs: 0,
+  //     sm: 360,
+  //     md: 600,
+  //     lg: 900,
+  //     xl: 1280
+  //   }
+  // }
 });
 
 export default theme;

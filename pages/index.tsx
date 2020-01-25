@@ -5,7 +5,8 @@ import { redirectAuth } from "../lib/redirectAuth";
 import { APP_ACTIONS, useAppContext } from "../web/context/AppContext";
 import { getLayout } from "../web/modules/layout/Layout";
 import { MyContext } from "../web/types/MyContext";
-import { PostListController } from "../web/modules/post/postList/PostListController";
+import { PostListController } from "../web/modules/post/list/PostListController";
+import Grid from "@material-ui/core/Grid";
 
 const IndexPage = ({ loggedUser }: MyContext) => {
   const [, appDispatch] = useAppContext();
@@ -18,7 +19,15 @@ const IndexPage = ({ loggedUser }: MyContext) => {
 
   return (
     <>
-      <PostListController />
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={8} md={8} lg={8}>
+          <PostListController />
+        </Grid>
+
+        <Grid item xs={12} sm={4} md={4} lg={4}>
+          testing
+        </Grid>
+      </Grid>
       <Divider variant="middle" style={{ marginTop: 40 }} />
     </>
   );
