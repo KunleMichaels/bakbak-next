@@ -10,6 +10,8 @@ export const ROUTE_NAMES = {
   BLOG_DETAILS: "/blog",
   CREATE_BLOG: "/blog/create-blog",
 
+  POST_DETAILS: "/post",
+
   USER_LOGOUT: "/user/logout",
   USER_ADD_PERSONAL_DETAILS: "/user/add-personal-details",
   USER_ADD_SKILLS_AND_EXPERIENCE: "/user/add-skills-and-experience",

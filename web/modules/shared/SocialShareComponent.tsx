@@ -4,8 +4,8 @@ import {
   FacebookShareButton,
   FacebookIcon,
   // InstapaperShareButton,
-  LinkedinShareButton,
-  LinkedinIcon,
+  // LinkedinShareButton,
+  // LinkedinIcon,
   // PinterestShareButton,
   // RedditShareButton,
   TwitterShareButton,
@@ -56,19 +56,13 @@ export const SocialShare = (props: Props) => {
         >
           <FacebookIcon round={true} size={32} />
         </FacebookShareButton>
-        <LinkedinShareButton
-          title={title}
-          summary={details}
-          source={websiteName}
-          url={url}
-          style={{ marginRight: 15 }}
-        >
+        {/* <LinkedinShareButton url={url} style={{ marginRight: 15 }}>
           <LinkedinIcon round={true} size={32} />
-        </LinkedinShareButton>
+        </LinkedinShareButton> */}
         <TwitterShareButton
           title={title}
           via={websiteName}
-          hashtags={hashtagArray}
+          hashtags={hashtags}
           url={url}
           style={{ marginRight: 15 }}
         >

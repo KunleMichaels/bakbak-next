@@ -1,7 +1,6 @@
 import { Avatar, makeStyles, Theme, Typography } from "@material-ui/core";
 // import { formatDistanceToNow } from "date-fns";
 import React from "react";
-import Linkify from "react-linkify";
 import { QUERY, ROUTE_NAMES } from "../../../../common";
 import { MoreOptionsComponent } from "../../shared/MoreOptionsComponent";
 import NextLink from "../../shared/NextLink";
@@ -68,16 +67,12 @@ export const CommentItemView = (props: IProps) => {
           <div>
             {comment.text && (
               <Typography style={{ fontSize: 15, fontWeight: 400 }}>
-                <Linkify>
-                  {comment.text
-                    .split("\n")
-                    .map((text: string, index: number) => (
-                      <React.Fragment key={`${text}-${index}`}>
-                        {text}
-                        <br />
-                      </React.Fragment>
-                    ))}
-                </Linkify>
+                {comment.text.split("\n").map((text: string, index: number) => (
+                  <React.Fragment key={`${text}-${index}`}>
+                    {text}
+                    <br />
+                  </React.Fragment>
+                ))}
               </Typography>
             )}
           </div>
